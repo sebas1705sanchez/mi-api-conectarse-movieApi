@@ -4,6 +4,6 @@ import moviesRoutes from './routes/moviesRoutes.js';
 const app = express();
 
 app.use(express.json());
-app.use('/', moviesRoutes);
+app.use('/api', moviesRoutes);
 
 export default app;

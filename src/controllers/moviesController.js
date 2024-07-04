@@ -17,3 +17,13 @@ export const getMovieById = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+
+export const getTv = async (req, res) => {
+  try {
+    const response = await api.get('/tv/pupular');
+    res.json(response.data);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
